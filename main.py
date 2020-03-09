@@ -6,9 +6,9 @@ import sympy.abc
 from utils import *
 
 x_start = 0
-a = 4
-x_end = (2 * math.pi / a) + 0.1
-step = 0.1
+a = 1
+x_end = 4 * (2 * math.pi / a) + 0.1
+step = 0.2
 
 
 def f_symbol():
@@ -84,7 +84,6 @@ def evaluate_cubic_splines():
 
     m_solved = np.linalg.solve(M, D)
     # step 2. given m_is - derivatives evaluate spline
-    print('kek')
 
     def S(x):
         i = np.searchsorted(xes, x) - 1
